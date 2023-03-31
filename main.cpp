@@ -1,8 +1,10 @@
 #include <iostream>
 #include "funcs.h"
 
+
 int main()
 {
+
   Coord3D pointP = {10, 20, 30};
   Coord3D pointQ = {-20, 21, -22};
 
@@ -20,25 +22,19 @@ int main()
     std::cout << ppos.x << " " << ppos.y << " " << ppos.z << std::endl; // prints: 2 -10 100.4
 
   //Task E
-    double x = 1; 
-    double y = 2; 
-    double z = 3; 
-    
-    std::cout << "Enter position: ";
-    std::cin >> x >> y >> z;
+  double x = 5; 
+  double y = 6; 
+  double z = 7; 
     Coord3D *ppos = createCoord3D(x,y,z);
-    
-    std::cout << "Enter velocity: ";
-    std::cin >> x >> y >> z;
     Coord3D *pvel = createCoord3D(x,y,z);
 
     move(ppos, pvel, 10.0);
 
-    std::cout << "Coordinates after 10 seconds: " << (*ppos).x << " " << (*ppos).y << " " << (*ppos).z << endl;
+    std::cout << "Coordinates after 10 seconds: " << (*ppos).x << " " << (*ppos).y << " " << (*ppos).z << std::endl;
 
     deleteCoord3D(ppos); // release memory
     deleteCoord3D(pvel);
 
 
-  return 0;
+  // return 0;
 }
