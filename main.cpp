@@ -22,9 +22,7 @@ int main()
     std::cout << ppos.x << " " << ppos.y << " " << ppos.z << std::endl; // prints: 2 -10 100.4
 
   //Task E
-  double x = 5; 
-  double y = 6; 
-  double z = 7; 
+  double x,y,z; 
     Coord3D *ppos = createCoord3D(x,y,z);
     Coord3D *pvel = createCoord3D(x,y,z);
 
